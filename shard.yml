@@ -1,0 +1,13 @@
+name: students
+version: 0.1.0
+
+authors:
+  - Ivo Limmen <ivo@limmen.org>
+
+targets:
+  students:
+    main: src/students.cr
+
+crystal: 0.35.1
+
+license: MIT
