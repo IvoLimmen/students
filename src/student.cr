@@ -7,7 +7,7 @@ class Student
   end
 
   def add_grade(course : String, grade : Float64)
-    c = @courses.find {|c| c.name == course }
+    c = @courses.find {|i| i.name == course }
     if c.nil?
       c = Course.new course
       @courses << c

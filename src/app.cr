@@ -50,6 +50,6 @@ until command == "end"
   end
 end
 
-students.each do |student|
-  student.totals
+students.each do |s|
+  s.totals
 end
