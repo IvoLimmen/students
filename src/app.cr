@@ -1,52 +1,5 @@
-class Student
-  def initialize(name : String)
-    @name = name
-    @courses = Array(Course).new
-  end
-
-  def add_grade(course : String, grade : Float64)
-    c = @courses.find {|c| c.name == course }
-    if c.nil?
-      c = Course.new course
-      @courses << c
-    end
-
-    c.add_grade grade
-  end
-
-  def name
-    @name
-  end
-
-  def totals
-    puts "Grades for #{name}"
-    @courses.each do |course|
-      course.total
-    end
-    puts "Done"
-  end
-end
-
-class Course
-  def initialize(name : String)
-    @name = name
-    @grades = Array(Float64).new
-  end
-
-  def name
-    @name
-  end
-
-  def add_grade(grade : Float64)
-    @grades << grade
-  end
-
-  def total
-    exams = @grades.size.to_f
-    avg = @grades.sum.to_f / @grades.size.to_f
-    puts "#{@name} - #{exams} exams - #{avg} avg"
-  end
-end
+require "./student"
+require "./course"
 
 def help
   puts "Grading system"

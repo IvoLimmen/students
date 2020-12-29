@@ -6,7 +6,7 @@ authors:
 
 targets:
   students:
-    main: src/students.cr
+    main: src/app.cr
 
 crystal: 0.35.1
 
