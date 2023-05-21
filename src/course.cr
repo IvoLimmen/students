@@ -13,7 +13,7 @@ class Course
   end
 
   def total
-    exams = @grades.size.to_f
+    exams = @grades.size.to_i
     avg = @grades.sum.to_f / @grades.size.to_f
     puts "#{@name} - #{exams} exams - #{avg} avg"
   end

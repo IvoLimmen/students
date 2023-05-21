@@ -8,11 +8,8 @@ targets:
   students:
     main: src/app.cr
 
-crystal: 0.35.1
+crystal: 1.8.0
 
 license: MIT
 
 development_dependencies:
-  ameba:
-    github: crystal-ameba/ameba
-    version: ~> 0.13.0

@@ -13,8 +13,8 @@ command = nil
 students = Array(Student).new
 student = nil
 
-until command == "end"
-  puts "Input command"
+until command == "end" || command == "quit"
+  puts "Input command:"
   command = gets
 
   case command
@@ -42,6 +42,8 @@ until command == "end"
     else
       student.add_grade(course, grade)
     end
+  when "end" || "quit"
+    # ignore
   when "help"
     help()
   else
