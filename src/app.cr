@@ -26,7 +26,7 @@ until command == "end" || command == "quit"
     student = Student.new name
     students << student
   when .includes?("select-student")
-    name = command[11..-1].strip()
+    name = command[14..-1].strip()
     student = students.find {|s| s.name == name }
     if student.nil?
       puts "Student #{name} not found"
